@@ -1,0 +1,312 @@
+{
+  "reportSchema": "1.1",
+  "scanInfo": {
+    "engineVersion": "7.1.1",
+    "dataSource": [
+      { "name": "NVD CVE Checked", "timestamp": "2022-07-21T22:06:11" },
+      { "name": "NVD CVE Modified", "timestamp": "2022-07-21T20:00:01" },
+      { "name": "VersionCheckOn", "timestamp": "2022-07-21T22:06:11" }
+    ]
+  },
+  "projectInfo": {
+    "name": "Owasp Sample Dependency Check",
+    "reportDate": "2022-07-21T22:06:20.788508Z",
+    "credits": {
+      "NVD": "This report contains data retrieved from the National Vulnerability Database: http://nvd.nist.gov",
+      "NPM": "This report may contain data retrieved from the NPM Public Advisories: https://www.npmjs.com/advisories",
+      "RETIREJS": "This report may contain data retrieved from the RetireJS community: https://retirejs.github.io/retire.js/",
+      "OSSINDEX": "This report may contain data retrieved from the Sonatype OSS Index: https://ossindex.sonatype.org"
+    }
+  },
+  "dependencies": [
+    {
+      "isVirtual": true,
+      "fileName": "Flask",
+      "filePath": "/home/vsts/work/1/s/requirements.txt:Flask/null",
+      "evidenceCollected": {
+        "vendorEvidence": [],
+        "productEvidence": [
+          {
+            "type": "product",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "product",
+            "value": "Flask"
+          }
+        ],
+        "versionEvidence": [
+          {
+            "type": "version",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "version",
+            "value": "$enc.json($evidence.getValue().trim())"
+          }
+        ]
+      },
+      "packages": [{ "id": "pkg:pypi/flask", "confidence": "HIGHEST" }]
+    },
+    {
+      "isVirtual": true,
+      "fileName": "PyJWT",
+      "filePath": "/home/vsts/work/1/s/requirements.txt:PyJWT/null",
+      "evidenceCollected": {
+        "vendorEvidence": [],
+        "productEvidence": [
+          {
+            "type": "product",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "product",
+            "value": "PyJWT"
+          }
+        ],
+        "versionEvidence": [
+          {
+            "type": "version",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "version",
+            "value": "$enc.json($evidence.getValue().trim())"
+          }
+        ]
+      },
+      "packages": [{ "id": "pkg:pypi/pyjwt", "confidence": "HIGHEST" }]
+    },
+    {
+      "isVirtual": true,
+      "fileName": "click",
+      "filePath": "/home/vsts/work/1/s/requirements.txt:click/null",
+      "evidenceCollected": {
+        "vendorEvidence": [],
+        "productEvidence": [
+          {
+            "type": "product",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "product",
+            "value": "click"
+          }
+        ],
+        "versionEvidence": [
+          {
+            "type": "version",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "version",
+            "value": "$enc.json($evidence.getValue().trim())"
+          }
+        ]
+      },
+      "packages": [{ "id": "pkg:pypi/click", "confidence": "HIGHEST" }]
+    },
+    {
+      "isVirtual": false,
+      "fileName": "cookie.js",
+      "filePath": "/home/vsts/work/1/s/bad/payloads/cookie.js",
+      "md5": "061f559bafe80f1149dfb4038dc2a803",
+      "sha1": "994dadc682b04f625d016ad68eefb36bc7155f60",
+      "sha256": "7c581a2ea8ba456b595b63943bc3c659e16a607b5d8a5745fc9e24bb91d9e492",
+      "relatedDependencies": [
+        {
+          "isVirtual": false,
+          "fileName": "cookie.js",
+          "filePath": "/home/vsts/work/1/s/good/payloads/cookie.js",
+          "sha256": "7c581a2ea8ba456b595b63943bc3c659e16a607b5d8a5745fc9e24bb91d9e492",
+          "sha1": "994dadc682b04f625d016ad68eefb36bc7155f60",
+          "md5": "061f559bafe80f1149dfb4038dc2a803"
+        }
+      ],
+      "evidenceCollected": {
+        "vendorEvidence": [],
+        "productEvidence": [],
+        "versionEvidence": []
+      }
+    },
+    {
+      "isVirtual": true,
+      "fileName": "cryptography",
+      "filePath": "/home/vsts/work/1/s/requirements.txt:cryptography/null",
+      "evidenceCollected": {
+        "vendorEvidence": [],
+        "productEvidence": [
+          {
+            "type": "product",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "product",
+            "value": "cryptography"
+          }
+        ],
+        "versionEvidence": [
+          {
+            "type": "version",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "version",
+            "value": "$enc.json($evidence.getValue().trim())"
+          }
+        ]
+      },
+      "packages": [{ "id": "pkg:pypi/cryptography", "confidence": "HIGHEST" }]
+    },
+    {
+      "isVirtual": true,
+      "fileName": "geoip2",
+      "filePath": "/home/vsts/work/1/s/requirements.txt:geoip2/null",
+      "evidenceCollected": {
+        "vendorEvidence": [],
+        "productEvidence": [
+          {
+            "type": "product",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "product",
+            "value": "geoip2"
+          }
+        ],
+        "versionEvidence": [
+          {
+            "type": "version",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "version",
+            "value": "$enc.json($evidence.getValue().trim())"
+          }
+        ]
+      },
+      "packages": [{ "id": "pkg:pypi/geoip2", "confidence": "HIGHEST" }]
+    },
+    {
+      "isVirtual": true,
+      "fileName": "jsonschema",
+      "filePath": "/home/vsts/work/1/s/requirements.txt:jsonschema/null",
+      "evidenceCollected": {
+        "vendorEvidence": [],
+        "productEvidence": [
+          {
+            "type": "product",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "product",
+            "value": "jsonschema"
+          }
+        ],
+        "versionEvidence": [
+          {
+            "type": "version",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "version",
+            "value": "$enc.json($evidence.getValue().trim())"
+          }
+        ]
+      },
+      "packages": [{ "id": "pkg:pypi/jsonschema", "confidence": "HIGHEST" }]
+    },
+    {
+      "isVirtual": false,
+      "fileName": "keylogger.js",
+      "filePath": "/home/vsts/work/1/s/bad/payloads/keylogger.js",
+      "md5": "060f77bee1963c80da5d0fa9aa42c677",
+      "sha1": "f55a48c8b7ec93692da6e753866b66b02a912213",
+      "sha256": "d6229a66660eb50fcb2dd88f9f2e1222824807b9e23a829f8f6fa0c67d5e2eb9",
+      "relatedDependencies": [
+        {
+          "isVirtual": false,
+          "fileName": "keylogger.js",
+          "filePath": "/home/vsts/work/1/s/good/payloads/keylogger.js",
+          "sha256": "d6229a66660eb50fcb2dd88f9f2e1222824807b9e23a829f8f6fa0c67d5e2eb9",
+          "sha1": "f55a48c8b7ec93692da6e753866b66b02a912213",
+          "md5": "060f77bee1963c80da5d0fa9aa42c677"
+        }
+      ],
+      "evidenceCollected": {
+        "vendorEvidence": [],
+        "productEvidence": [],
+        "versionEvidence": []
+      }
+    },
+    {
+      "isVirtual": true,
+      "fileName": "pyotp",
+      "filePath": "/home/vsts/work/1/s/requirements.txt:pyotp/null",
+      "evidenceCollected": {
+        "vendorEvidence": [],
+        "productEvidence": [
+          {
+            "type": "product",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "product",
+            "value": "pyotp"
+          }
+        ],
+        "versionEvidence": [
+          {
+            "type": "version",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "version",
+            "value": "$enc.json($evidence.getValue().trim())"
+          }
+        ]
+      },
+      "packages": [{ "id": "pkg:pypi/pyotp", "confidence": "HIGHEST" }]
+    },
+    {
+      "isVirtual": true,
+      "fileName": "qrcode",
+      "filePath": "/home/vsts/work/1/s/requirements.txt:qrcode/null",
+      "evidenceCollected": {
+        "vendorEvidence": [],
+        "productEvidence": [
+          {
+            "type": "product",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "product",
+            "value": "qrcode"
+          }
+        ],
+        "versionEvidence": [
+          {
+            "type": "version",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "version",
+            "value": "$enc.json($evidence.getValue().trim())"
+          }
+        ]
+      },
+      "packages": [{ "id": "pkg:pypi/qrcode", "confidence": "HIGHEST" }]
+    },
+    {
+      "isVirtual": true,
+      "fileName": "requests",
+      "filePath": "/home/vsts/work/1/s/requirements.txt:requests/null",
+      "evidenceCollected": {
+        "vendorEvidence": [],
+        "productEvidence": [
+          {
+            "type": "product",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "product",
+            "value": "requests"
+          }
+        ],
+        "versionEvidence": [
+          {
+            "type": "version",
+            "confidence": "HIGHEST",
+            "source": "requirements.txt",
+            "name": "version",
+            "value": "$enc.json($evidence.getValue().trim())"
+          }
+        ]
+      },
+      "packages": [{ "id": "pkg:pypi/requests", "confidence": "HIGHEST" }]
+    }
+  ]
+}

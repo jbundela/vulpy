@@ -1,0 +1,80 @@
+trigger:
+- main
+
+resources:
+- repo: self
+
+variables:
+  tag: '$(Build.BuildId)'
+
+stages:
+- stage: Build
+  displayName: Build image
+  jobs:
+  - job: Build
+    displayName: Build
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+    - task: Docker@2
+      displayName: Build an image
+      inputs:
+        command: build
+        dockerfile: '$(Build.SourcesDirectory)/Dockerfile'
+        tags: |
+          $(tag)
+
+   
+                           
+- stage: OwaspCheck
+  displayName: Owasp Dependency Check
+  jobs:
+  - job: Run
+    displayName: Check for Owasp Dependencies.
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+        
+      - task: Bash@3
+        inputs:
+          targetType: inline
+          script: |
+            pip3 install npm
+
+      - task: dependency-check-build-task@6
+        inputs:
+           projectName: 'Owasp Sample Dependency Check'
+           scanPath: '$(Build.SourcesDirectory)'
+           format: 'JSON'
+           reportsDirectory: '$(Build.SourcesDirectory)'
+           reportFilename: 'DependencyCheckReport.json'
+           enableExperimental: true
+           enableRetired: true
+           enableVerbose: true
+           
+           
+
+
+- stage: BanditAnalysis
+  displayName: Bandit Python Code Analysis
+  jobs:
+  - job: Run
+    displayName: Check for Python Vulnerabilities - Bandit
+    pool:
+      vmImage: ubuntu-latest
+    steps:
+      - task: Bash@3
+        displayName: Running Bandit Code Analysis
+        inputs:
+          targetType: 'inline'
+          script: |
+            pip3 install bandit || true
+            bandit-config-generator -o config.yml || true
+            bandit -r '$(Build.SourcesDirectory)' || true
+            bandit -r '$(Build.SourcesDirectory)' -f json -o banditreport.json || true
+            cat banditreport.json
+            find . -name banditreport.json
+            python severity.py
+            foo=$(python severity.py)
+            echo $foo          
+          workingDirectory: '$(Build.SourcesDirectory)'
